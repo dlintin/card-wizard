@@ -135,7 +135,7 @@ input[type="password"]{
     border-radius: 0;
     height: 100%; width: 100%;
     padding: 80px 20px 20px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.51, 0.02, 0.01, 0.88);
     border-radius: $border-radius;
   }
 
@@ -144,7 +144,7 @@ input[type="password"]{
   }
 
   .toRight{
-    transform: translate(100px);
+    transform: translate3d(0,0,100px);
     opacity: 0;
   }
 
@@ -153,23 +153,28 @@ input[type="password"]{
     opacity: 1;
   }
 
+  &:hover{
+    .card-middle{
+      transform: translate3d(0, 0, -60px);
+      opacity: .8;
+    }
+  
+    .card-back{
+      transform: translate3d(0, 0, -120px);
+      opacity: .4;
+    }
+  }
+
 }
 
 .metaInfo{
   position: fixed;
   bottom: 20px;
   left: 20px;
-  color: rgba(0,0,0,0.5);
-}
+  color: rgba(255,255,255,0.8);
 
-.uic-wrapper:hover{
-  .card-middle{
-    transform: translate3d(0, 0, -60px);
-    opacity: .8;
-  }
-
-  .card-back{
-    transform: translate3d(0, 0, -120px);
-    opacity: .4;
+  a{
+    color: #fff;
+    text-decoration: underline;
   }
 }
