@@ -1,5 +1,5 @@
 $border-radius : 8px;
-$color-green: #66bf65;
+$btn-color: #61B6B8;
 
 *{
   box-sizing: border-box;
@@ -11,7 +11,9 @@ a{
 }
 
 html,body{
-  background: #10a3f1;  /* fallback for old browsers */
+  // background: #10a3f1;  
+  background-image: url('https://images.unsplash.com/photo-1484256017452-47f3e80eae7c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=045fe88484a0dcb66ba42ad2f838e812&auto=format&fit=crop&w=2550&q=80');
+  background-size: cover;
   height: 100%;
   // font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -102,6 +104,7 @@ input[type="password"]{
       position: fixed;
       top: 20px;
       left: 20px;
+      
       transition: all 0.3s ease;
 
       &:active{
@@ -118,11 +121,15 @@ input[type="password"]{
       position: absolute;
       bottom: 10px; left: 10px; right: 10px;
       padding: 10px;
-      background-color: $color-green;
+      background-color: $btn-color;
       color: white; text-align: center;
       border-radius: 0;
       border-radius: $border-radius;
       transition: all 0.3s ease;
+
+      &:hover{
+        opacity: 0.9;
+      }
 
       &:active{
         transform: scale(0.96);
@@ -173,8 +180,26 @@ input[type="password"]{
   left: 20px;
   color: rgba(255,255,255,0.8);
 
+  div{
+    margin-bottom: 5px;
+  }
+
   a{
     color: #fff;
     text-decoration: underline;
   }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  color: #c9911c;
+  border-radius: 8px;
+  background-color: #ffdf3f85;
+
+}
+
+.logo{
+  display: block;
+  padding: 20px;
 }
